@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED9564242943C972006007C8 /* nasa-pictures.json in Resources */ = {isa = PBXBuildFile; fileRef = ED9564232943C972006007C8 /* nasa-pictures.json */; };
+		ED9564262943CAD8006007C8 /* ImageInfoDetailTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9564252943CAD8006007C8 /* ImageInfoDetailTest.swift */; };
 		EDCAEF4A2940EF8800073DA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCAEF492940EF8800073DA8 /* AppDelegate.swift */; };
 		EDCAEF4C2940EF8800073DA8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCAEF4B2940EF8800073DA8 /* SceneDelegate.swift */; };
 		EDCAEF4E2940EF8800073DA8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCAEF4D2940EF8800073DA8 /* ViewController.swift */; };
@@ -45,6 +47,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		ED9564232943C972006007C8 /* nasa-pictures.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "nasa-pictures.json"; sourceTree = "<group>"; };
+		ED9564252943CAD8006007C8 /* ImageInfoDetailTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageInfoDetailTest.swift; sourceTree = "<group>"; };
 		EDCAEF462940EF8800073DA8 /* NASAGalleryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NASAGalleryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDCAEF492940EF8800073DA8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDCAEF4B2940EF8800073DA8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -136,6 +140,8 @@
 			isa = PBXGroup;
 			children = (
 				EDCAEF602940EF9300073DA8 /* NASAGalleryAppTests.swift */,
+				ED9564252943CAD8006007C8 /* ImageInfoDetailTest.swift */,
+				ED9564232943C972006007C8 /* nasa-pictures.json */,
 			);
 			path = NASAGalleryAppTests;
 			sourceTree = "<group>";
@@ -332,6 +338,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED9564242943C972006007C8 /* nasa-pictures.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,6 +375,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED9564262943CAD8006007C8 /* ImageInfoDetailTest.swift in Sources */,
 				EDCAEF612940EF9300073DA8 /* NASAGalleryAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
