@@ -9,7 +9,7 @@ import Foundation
 
 class APIService : NSObject {
     
-    private let sourceURL = URL(string: "https://raw.githubusercontent.com/obvious/take-home-eercise-data/trunk/nasa-pictures.json")
+    private let sourceURL = URL(string: "https://raw.githubusercontent.com/obvious/take-home-exercise-data/trunk/nasa-pictures.json")
     
     func apiToGetImageData(completion : @escaping ([ImageModel]) -> ()){
         
