@@ -1,24 +1,183 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PQ6-hh-4ZD">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation View Controller-->
+        <scene sceneID="G45-AK-qVR">
+            <objects>
+                <navigationController storyboardIdentifier="NavigationViewController" id="PQ6-hh-4ZD" customClass="NavigationViewController" customModule="NASAGalleryApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qTr-BT-wxL">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="1cI-lC-bBu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="isW-yR-cad" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-720" y="82"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NASAGalleryApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Oce-mM-lmZ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="129" y="82"/>
+        </scene>
+        <!--Gallery Image DetailVC-->
+        <scene sceneID="QhI-kM-0nq">
+            <objects>
+                <viewController storyboardIdentifier="GalleryImageDetailVC" id="K8Z-mI-z7N" customClass="GalleryImageDetailVC" customModule="NASAGalleryApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mlA-lL-kd3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Z2w-7V-Gty">
+                                <rect key="frame" x="0.0" y="197" width="414" height="397"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xHZ-r2-lIk">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="OLQ-0C-wVu">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="4tV-Dj-JMr">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="K8Z-mI-z7N" id="d8m-9Z-oGt"/>
+                                    <outlet property="delegate" destination="K8Z-mI-z7N" id="RPR-7y-OuX"/>
+                                </connections>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Is2-EK-imm">
+                                <rect key="frame" x="184.5" y="827" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="Ym1-et-GoT"/>
+                                    <constraint firstAttribute="height" constant="45" id="sA5-BN-82H"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="info.circle" catalog="system"/>
+                                <connections>
+                                    <action selector="btnImageInfo:" destination="K8Z-mI-z7N" eventType="touchUpInside" id="NyD-bm-EGh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="oef-fB-qSZ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Is2-EK-imm" firstAttribute="centerX" secondItem="mlA-lL-kd3" secondAttribute="centerX" id="dXe-OS-Q5G"/>
+                            <constraint firstItem="Is2-EK-imm" firstAttribute="bottom" secondItem="oef-fB-qSZ" secondAttribute="bottom" constant="10" id="wKL-bR-HMV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionVw" destination="Z2w-7V-Gty" id="ckI-j9-pLT"/>
+                        <outlet property="infoView" destination="swm-dU-fV5" id="26i-YK-ogg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gYA-S8-yCI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="swm-dU-fV5" customClass="ImageDetailInfoView" customModule="NASAGalleryApp" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="350"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hnz-3e-3qI">
+                            <rect key="frame" x="10" y="30" width="394" height="310"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Jx2-Yt-hGB">
+                                    <rect key="frame" x="10" y="0.0" width="384" height="132.5"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pin-sS-jcX">
+                                            <rect key="frame" x="0.0" y="0.0" width="384" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BsR-GT-bbe">
+                                            <rect key="frame" x="0.0" y="30.5" width="384" height="18"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="45o-49-K1F">
+                                            <rect key="frame" x="0.0" y="58.5" width="384" height="18"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eco-i7-yKy">
+                                            <rect key="frame" x="0.0" y="86.5" width="384" height="18"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ES-re-x0F">
+                                            <rect key="frame" x="0.0" y="114.5" width="384" height="18"/>
+                                            <fontDescription key="fontDescription" type="italicSystem" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="Jx2-Yt-hGB" firstAttribute="bottom" secondItem="vG2-hC-OEX" secondAttribute="bottom" id="Ccb-bj-6cx"/>
+                                <constraint firstItem="Jx2-Yt-hGB" firstAttribute="leading" secondItem="vG2-hC-OEX" secondAttribute="leading" constant="10" id="FkG-Eg-8iI"/>
+                                <constraint firstItem="Jx2-Yt-hGB" firstAttribute="top" secondItem="vG2-hC-OEX" secondAttribute="top" id="KUi-5C-aao"/>
+                                <constraint firstItem="Jx2-Yt-hGB" firstAttribute="trailing" secondItem="vG2-hC-OEX" secondAttribute="trailing" id="Mgd-ea-a9S"/>
+                                <constraint firstItem="Fio-zL-Zpd" firstAttribute="width" secondItem="Jx2-Yt-hGB" secondAttribute="width" constant="10" id="Xnd-oG-jyu"/>
+                            </constraints>
+                            <viewLayoutGuide key="contentLayoutGuide" id="vG2-hC-OEX"/>
+                            <viewLayoutGuide key="frameLayoutGuide" id="Fio-zL-Zpd"/>
+                        </scrollView>
+                    </subviews>
+                    <viewLayoutGuide key="safeArea" id="CTh-Wb-vgM"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="Hnz-3e-3qI" firstAttribute="leading" secondItem="CTh-Wb-vgM" secondAttribute="leading" constant="10" id="MR7-3d-Ogr"/>
+                        <constraint firstItem="Hnz-3e-3qI" firstAttribute="top" secondItem="swm-dU-fV5" secondAttribute="top" constant="30" id="MtM-M2-6NH"/>
+                        <constraint firstItem="CTh-Wb-vgM" firstAttribute="trailing" secondItem="Hnz-3e-3qI" secondAttribute="trailing" constant="10" id="WAk-qx-QJj"/>
+                        <constraint firstItem="CTh-Wb-vgM" firstAttribute="bottom" secondItem="Hnz-3e-3qI" secondAttribute="bottom" constant="10" id="v3U-UT-Ea2"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="lblCopyRights" destination="1ES-re-x0F" id="jrH-AH-GjE"/>
+                        <outlet property="lblDate" destination="eco-i7-yKy" id="SWZ-Yo-1kl"/>
+                        <outlet property="lblExplanation" destination="BsR-GT-bbe" id="OGB-75-brQ"/>
+                        <outlet property="lblMediaType" destination="45o-49-K1F" id="5my-NU-cV3"/>
+                        <outlet property="lblTitle" destination="pin-sS-jcX" id="TBF-ff-klA"/>
+                    </connections>
+                </view>
+            </objects>
+            <point key="canvasLocation" x="1098.5507246376812" y="81.696428571428569"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="info.circle" catalog="system" width="128" height="121"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
