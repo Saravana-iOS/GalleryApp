@@ -52,3 +52,30 @@ extension UIImageView {
     
 }
 
+extension UIView {
+    
+    func viewAnimationUp(isAppear: Bool,maxYValuel : CGFloat, completion: ((Bool) -> Void)? = nil) {
+        self.layoutIfNeeded()
+        let animation = UIViewPropertyAnimator(duration: 0.5, dampingRatio: 1) {
+            
+            if isAppear {
+                self.frame.origin.y = maxYValuel
+            }
+            else{
+                self.frame.origin.y = UIScreen.main.bounds.height
+            }
+        }
+        animation.addCompletion { position in
+            if position == .end {
+                
+                if !isAppear {
+                    
+                }
+                completion?(true)
+            }
+        }
+        animation.startAnimation()
+        
+    }
+    
+}

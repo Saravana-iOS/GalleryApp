@@ -94,7 +94,10 @@ extension ViewController : UICollectionViewDelegate, UICollectionViewDelegateFlo
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
+        let viewModel = ImageViewModel(viewModel: self.imgViewModel.imgData)
         let imageDetailVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "GalleryImageDetailVC") as! GalleryImageDetailVC
+        imageDetailVC.imgInfoViewModel = viewModel
+        imageDetailVC.selectedItem = indexPath.row
         self.navigationController?.pushViewController(imageDetailVC, animated: true)
         
     }

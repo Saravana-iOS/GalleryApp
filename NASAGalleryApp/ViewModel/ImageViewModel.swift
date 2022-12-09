@@ -25,6 +25,10 @@ class ImageViewModel : NSObject {
         getImageDetails()
     }
     
+    init(viewModel : [ImageModel]) {
+        self.imgData = viewModel
+    }
+    
     func getImageDetails(){
         
         self.apiService.apiToGetImageData { (images) in

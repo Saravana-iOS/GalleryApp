@@ -14,7 +14,9 @@ class ImageDetailInfoView: UIView {
     @IBOutlet weak var lblMediaType: UILabel!
     @IBOutlet weak var lblDate: UILabel!
     @IBOutlet weak var lblCopyRights: UILabel!
+    @IBOutlet weak var detailView: UIView!
 
+    @IBOutlet weak var scrollView: UIScrollView!
 
     /*
     // Only override draw() if you perform custom drawing.
